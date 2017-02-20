@@ -30,14 +30,9 @@ fs.access(fileName, fs.constants.R_OK, function (error) {
   function lineRequestHandler(req, res) {
     console.log (`Processing request for line: ${req.params.lineNum}`);
 
-    try {
-      myFile.getLine(Number(req.params.lineNum), function (line) {
-        res.status(200).send(line);
-      });
-    } catch (error) {
-      res.status(500).send(error);
-    }
-
+    myFile.getLine(Number(req.params.lineNum), function (line) {
+      res.status(200).send(line);
+    });
   }
 
   app.get('/lines/:lineNum', function (req, res) {
