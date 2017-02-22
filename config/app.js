@@ -5,11 +5,11 @@ module.exports = {
   },
   lineServer: {
     indexLineInterval: 5000,
-  },
-  cache: {
-    nodeCache: {
-        ttl: 100,
-        checkPeriod: 200,
-    }
+    cache: {
+      nodeCache: {
+          ttl: 100,
+          checkPeriod: 200,
+      },
+    },
   },
 };

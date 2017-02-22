@@ -14,7 +14,10 @@ module.exports = class FileParser {
         this.lineCount = 0;
         this.index = { 1: 0 };
         this.indexLineInterval = config.indexLineInterval || 10000;
-        this.cache = new NodeCache({ stdTTL: 100, checkperiod: 120 });
+        this.cache = new NodeCache({
+          stdTTL: config.cache.nodeCache.ttl || 100,
+          checkperiod: config.cache.nodeCache.checkPeriod || 120,
+        });
 
         this.indexFile();
     }
