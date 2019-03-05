@@ -1,6 +1,6 @@
-# Salsify Line Server
+# Line Server
 
-A solution to the Salsify Line Server Problem. This application provides an HTTP interdace to expose the contents of an ASCII text file, one line at at time. At startup, the application requires one paramter which is the path to the text file, and takes an optional second parameter which is the port number to listen for HTTP requests. By default the application will listen on port 3000, per the configuration in configs/app.js.
+A solution to the Line Server Problem. This application provides an HTTP interdace to expose the contents of an ASCII text file, one line at at time. At startup, the application requires one paramter which is the path to the text file, and takes an optional second parameter which is the port number to listen for HTTP requests. By default the application will listen on port 3000, per the configuration in configs/app.js.
 
 Upon startup, the file is scanned and an index is created by line number. By default that index is per 5000 lines.
 
